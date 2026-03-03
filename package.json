@@ -1,0 +1,11 @@
+{
+  "name": "metrics-collector",
+  "version": "1.0.0",
+  "description": "Internal build metrics and diagnostics service",
+  "scripts": {
+    "build": "echo 'Build complete'",
+    "test": "echo 'No tests defined'",
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}
